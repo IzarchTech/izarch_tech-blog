@@ -4,8 +4,7 @@
     "build": {
       "dependsOn": ["^build"],
       "outputs": [
-        "dist/**",
-        "build/**"
+        "dist/**"
       ]
     },
     "test": {
@@ -19,6 +18,9 @@
     "deploy": {
       "dependsOn": ["build", "test", "lint"],
       "outputs": []
+    },
+    "dev": {
+      "cache": false
     }
   }
 }

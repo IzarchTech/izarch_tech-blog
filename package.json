@@ -6,9 +6,10 @@
   "author": "Chukwunwike Udezue <izarchtechnologies@hotmail.com>",
   "license": "MIT",
   "private": true,
+  "workspaces": ["apps/*", "packages/*"],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
+    "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
     "test": "turbo run test"
   },

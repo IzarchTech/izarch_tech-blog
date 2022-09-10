@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres
+    volumes:
+      - db-volume:/var/lib/postgresql/data
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=izarch_tech-blog
+    ports:
+      - "5432:5432"
+    networks:
+      - izarch_tech-blog
+
+networks:
+  izarch_tech-blog:
+    driver: bridge
+volumes:
+  db-volume:
